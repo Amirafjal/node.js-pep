@@ -2,7 +2,7 @@
 // *****Files===>
 
 
-const fs = require('fs')
+// const fs = require('fs')
 
 // let content = fs.readFileSync('f1.txt')
 // console.log('this is f1 data : ' + content)
@@ -41,9 +41,29 @@ const fs = require('fs')
 // console.log('isFile?', statsOfDirectory.isFile())
 // console.log('isDirectory', statsOfDirectory.isDirectory())
 
-let folderPath = '/Users/amirafjal/Desktop/pepcoding/node/myDirectory'
-let folderContent = fs.readdirSync(folderPath)
-console.log('Directory Content : ' + folderContent)
+// let folderPath = '/Users/amirafjal/Desktop/pepcoding/node/myDirectory'
+// let folderContent = fs.readdirSync(folderPath)
+// console.log('Directory Content : ' + folderContent)
+
+
+// copying file 
+// src file , destination file
+
+const fs = require('fs')
+const path = require('path')
+
+let srcFilePath = '/Users/amirafjal/Desktop/pepcoding/node/myDirectory/demo.txt'
+let destinationPath = '/Users/amirafjal/Desktop/pepcoding/node/myDirectory2'
+
+let tobecopiedFileName = path.basename(srcFilePath)
+console.log(tobecopiedFileName)
+
+let destPath = path.join(destinationPath, tobecopiedFileName)
+console.log(destPath)
+
+fs.copyFileSync(srcFilePath, destPath)
+console.log("file copied")
+
 
 
 
