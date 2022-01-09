@@ -1,9 +1,9 @@
-const calcModuleTest = require('./calc')
+const calcModule = require('./calc')
 
-calcModuleTest.addition(20, 30)
+calcModule.addition(20, 30)
 
-calcModuleTest.subtraction(30, 20)
+calcModule.subtraction(30, 20)
 
-calcModuleTest.multiplication(20, 30)
+calcModule.multiplication(20, 30)
 
-calcModuleTest.division(30, 20)
+calcModule.division(30, 20)
